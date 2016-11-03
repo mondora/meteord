@@ -8,7 +8,7 @@ BUNDLE_DIR=/tmp/bundle-dir
 cp -R /app $COPIED_APP_PATH
 cd $COPIED_APP_PATH
 
-METEOR_VERSION=1.1.0.2 meteor build --directory $BUNDLE_DIR --server=http://localhost:3000
+METEOR_NO_RELEASE_CHECK=true meteor build --unsafe-perm --directory $BUNDLE_DIR --server=http://localhost:3000
 
 cd $BUNDLE_DIR/bundle/programs/server/
 npm i
